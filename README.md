@@ -13,13 +13,13 @@ php -v
 git clone https://github.com/ossipov/webpack4php
 
 # Install Webpack
-yarn add webpack webpack-cli --dev
+yarn add fs webpack webpack-cli webpack-livereload-plugin --dev
 
 # Install Babel support
 yarn add babel-cli babel-core babel-preset-env babel-register --dev
 
 # JS / CSS / SASS
-yarn add css-loader sass-loader node-sass --dev
+yarn add css-loader sass-loader node-sass csso-webpack-plugin favicons-webpack-plugin mini-css-extract-plugin postcss-loader postcss-modules --dev
 ```
 
 ### Include CSS / JS libraries you want to use
