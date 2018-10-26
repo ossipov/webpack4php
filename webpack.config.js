@@ -78,7 +78,7 @@ module.exports = ( env, options ) => {
                   browsers: ['last 10 versions']
                 }),
                 require('postcss-modules')({
-                  generateScopedName: ( options.mode == 'production' ? '[emoji]' : '[local]' ), // [emoji][hash:base64:4]
+                  generateScopedName: ( options.mode == 'production' ? '[hash:base64:4]' : '[local]' ), // [emoji][hash:base64:4]
                   getJSON: function(cssFileName, json, outputFileName) {
                     var path      = require('path');
                     var cssName     = path.basename(cssFileName);

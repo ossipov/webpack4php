@@ -20,6 +20,8 @@ $favicons = implode("\r\n  ", json_decode(file_get_contents(realpath(__DIR__.'/s
 function _($class) {
   global $env;
 
-  $class_mod = json_decode(file_get_contents(realpath(__DIR__.'/src/sass/app.sass.json')));
-  return ($env == 'dev') ? $class : $class_mod->$class;
+  $class_array = json_decode(file_get_contents(realpath(__DIR__.'/src/sass/app.sass.json')));
+  $class_mod = array_key_exists($class, $class_array) ? $class_array->$class : $class;
+
+  return ($env == 'dev') ? $class : $class_mod;
 }
