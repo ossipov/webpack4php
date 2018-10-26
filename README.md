@@ -12,14 +12,9 @@ php -v
 # Clone project
 git clone https://github.com/ossipov/webpack4php
 
-# Install Webpack
-yarn add fs webpack webpack-cli webpack-livereload-plugin --dev
+# Install Webpack and all dependencies for the project
+yarn install
 
-# Install Babel support
-yarn add babel-cli babel-core babel-preset-env babel-register --dev
-
-# JS / CSS / SASS
-yarn add css-loader sass-loader node-sass csso-webpack-plugin favicons-webpack-plugin mini-css-extract-plugin postcss-loader postcss-modules --dev
 ```
 
 ### Include CSS / JS libraries you want to use
@@ -46,18 +41,10 @@ $(function() {
 ```
 
 ### Favicons creation
-Put your logo to ``` src/favicon/logo.png ``` for webpack to create favicons based on your logo
-
+Put your logo to ``` src/favicon/logo.png ``` for Webpack to create favicons based on your logo
 
 ### Watching project and livereloading
 ``` watch.cmd ``` — If you run Windows
 
-``` yarn run watch ``` — Starting Webpack to see if there are changes in css / js files
-
-```cd public && php -s loacalhost:5050``` — start php server in public directory
-
 ### Building project
-``` yarn run build ```— this will build and minify css / jss (will also obfuscate css classes)
-```cd public && php -s loacalhost:5050``` — start php server in public directory
-
-
+You can build project from browser by adding ```?build=prod``` or ```?build=dev``` to the url
